@@ -1,0 +1,40 @@
+<!--
+# ------------------------------------------------ 
+# access python based web services using FLASK
+# Author: Arvind Kumar
+# Email: arvind.cse@gmail.com
+#-------------------------------------------------
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Welcome to Flask Application - Arvind </title>
+	<style>
+	*{
+			font-size:40px;
+	}
+	</style>
+</head>
+<body>
+	<input id="input-name" type="text"/>
+	<button id="button-name">Submit</button>
+	<p id="greeting"></p>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$("#button-name").click(function(event){
+			let message = { 
+				name: $("#input-name").val()
+			}
+
+		$.post("http://localhost:5000/akg-hello", JSON.stringify(message), function(response){
+			$("#greeting").text(response.greeting);
+			console.log(response);
+			});
+			});
+	</script>
+
+</body>
+
+
+</html>
