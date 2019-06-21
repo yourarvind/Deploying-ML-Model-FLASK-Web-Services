@@ -25,4 +25,8 @@ Deploying Machine Learning Model as Web Services using FLASK
 
 		# Run FLASK servers
 		flask run --host=0.0.0.0
+================================================================
+Youtube Tutorial video is available as following:
 
+	https://youtu.be/0FM2T6kswY8
+	
